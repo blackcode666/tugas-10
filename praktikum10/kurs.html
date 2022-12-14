@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>konversi mata uang</title>
+</head>
+<body>
+    <form style="background-color: gold ;">
+        <fieldset>
+            <legend>Kurs Rupiah - Mata Uang Asing</legend>
+            <table border="1">
+                <thead>
+                    <th>masukan nilai</th>
+                    <th>vals</th>
+                    <th>nilai rupiah</th>
+                </thead>
+                <tbody>
+                    <td> <input type="number" id="uang" onchange="kurs()"></td>
+                    <td> 
+                        <select id="pilihan" onchange="kurs()">
+                            <option value="" hidden></option>
+                            <option value="usd">Dollar US</option>
+                            <option value="sd">DOllar singapore</option>
+                            <option value="rm">Ringit Malaysya</option>
+                            <option value="yen">Yen Jepang</option>
+                            <option value="eu">Euro</option>
+                            <option value="riyal">Riyal Arab Saudi</option>
+
+                        </select>
+                    </td>
+                    <td> <input type="text" id="hasil"></td>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+
+    <script>
+        function kurs(){
+            let uang = document.getElementById("uang").value;
+            let mata_uang = document.getElementById("pilihan").value;
+            let rumus;
+            //logic
+            if (mata_uang == "usd") {
+                rumus = uang * 9915;
+                document.getElementById("hasil").value = rumus;
+            } else if(mata_uang == "sd"){
+                rumus = uang  * 13472;
+                document.getElementById("hasil").value = rumus;
+            } else if(mata_uang == "rm"){
+                rumus = uang  * 874;
+                document.getElementById("hasil").value = rumus;
+            } else if(mata_uang == "yen"){
+                rumus = uang  * 120;
+                document.getElementById("hasil").value = rumus;
+            } else if(mata_uang == "sd"){
+                rumus = uang  * 15888;
+                document.getElementById("hasil").value = rumus;
+            } else if(mata_uang == "riyal"){
+                rumus = uang  * 3592;
+                document.getElementById("hasil").value = rumus;
+            } else {
+                
+             }
+            }
+        
+    </script>
+</body>
+</html>

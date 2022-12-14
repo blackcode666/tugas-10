@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: greenyellow;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            margin: 10%;
+        }
+
+        .container {
+            background-color: black;
+            border-radius: 999px;
+            box-shadow: 3px 2px 8px greenyellow;
+            height: 400px;
+            margin: 1em 8em;
+        }
+
+        body {
+            background-color:black;
+            color: greenyellow;
+            
+        }
+
+        .forgotpw {
+            color: greenyellow;
+            font-size: 10pt;
+            margin-top: 3px;
+            text-align: right;
+        }
+
+        .content {
+            padding: 15px 40px;
+        }
+
+        .main {
+            letter-spacing: 4px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            text-align: center;
+            border-radius: 999999999999999999999999999999999999999999999px;
+            border: none;
+            box-shadow: 3px 2px 8px greenyellow;
+            color: greenyellow;
+            height: 60px;
+            margin: 0 auto;
+            margin-top: 50px;
+            width: 150px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .border {
+            height: 1px;
+            width: 100%;
+            background-color: black;
+        }
+
+        .input {
+            background-color: black;
+            border: green;
+        }
+    </style>
+
+    <script>
+        function dekor1() {
+            dekor_1 = document.getElementById("home");
+            dekor_1.style.color = "aqua";
+        }
+
+        function dekor2() {
+            dekor_2 = document.getElementById("home");
+            dekor_2.style.color = "black";
+        }
+
+        function cekform() {
+            let uname = document.getElementById("username").value;
+            let pw = document.getElementById("password").value;
+
+            if(uname != "Ramkangdaging" || pw != "mamangngawi666") {
+                alert("wadu salah password tuh man")
+            }else{
+                document.getElementById("login").href = `tugass.html`
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="dekor1()" onmouseout="dekor2()" id="home"><h1>selamat menunaikan ibadah login</h1></a>
+    <hr>
+    <br>
+    <div class="container">
+        <div class="content">
+            <div class="main">
+                <h2>LOGIN</h2>
+                <div class="garis">
+
+                </div>
+            </div>
+            <form method="post" class="form">
+                <label for="username">Username</label>
+                <input type="text" name="username" value="" class="input" id="username">
+                <div class="border"></div>
+
+                <label for="password">Password</label>
+                <input type="Password" name="password" value="" class="input" id="password">
+                <div class="border"></div>
+                <a href="#">
+                    <p class="forgotpw">Lupa Password?</p>
+                </a>
+                <a id="login" class="button" onclick="cekform()">LOGIN</a>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <p><b>UN dan PW nya</b><br>
+            Masukan Username : Ramkangdaging dan Password : mamangngawi666</p>
+    </footer>
+</body>
+</html>
